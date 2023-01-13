@@ -1,0 +1,15 @@
+BACKUP DATABASE MyDB
+TO DISK = 'C:\MyDB.bak'
+WITH FORMAT,
+MEDIANAME = 'MyDB_Backup',
+NAME = 'Full Backup of MyDB';
+GO
+
+/*
+This script creates a full backup of the "MyDB" database and saves it as a file called "MyDB.bak" in the "C:" drive. 
+The "WITH FORMAT" option initializes the backup and overwrites any existing backup file with the same name. The "MEDIANAME" and "NAME" options provide a name for the backup set and the backup media, respectively.
+
+You can also schedule this script to run automatically using SQL Server Agent.
+
+Note: This script will only work if the SQL Server user running the script has the necessary permissions to create backups.
+*/
